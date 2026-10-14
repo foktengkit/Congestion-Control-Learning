@@ -43,7 +43,7 @@
 | [04 · Semi-log：價格驅動](notebooks/04_series_parallel_semilog_price.ipynb) | Semi-log 訊號模型與價格驅動流量 | `新的第一部分4.1.5_semilog.ipynb` |
 | [05 · Semi-log：最佳化式流量](notebooks/05_series_parallel_semilog_optimization.ipynb) | Semi-log 訊號模型與最佳化式流量 | `新的第二部分4.2.2_semilog.ipynb` |
 
-原始程式及實驗參數均保留；筆記本的舊執行輸出已清除，論文圖片另存於 `docs/figures/`。原 semi-log 筆記本內文與檔名的章節編號不同，上表保留原始檔名供對照。
+
 
 ## 模型概要
 

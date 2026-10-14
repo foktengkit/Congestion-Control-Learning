@@ -4,7 +4,7 @@
 
 以 Python 與 Jupyter Notebook 模擬參數估計、價格更新和流量分配，從原始兩路模型延伸到 **8 條邊、13 條路徑**的串並聯網路，比較價格驅動與最佳化式流量生成，並包含線性及 semi-log 模型。
 
-[![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](#快速開始)
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](#參數與再現性)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](#實驗導覽)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
@@ -44,48 +44,6 @@
 | [05 · Semi-log：最佳化式流量](notebooks/05_series_parallel_semilog_optimization.ipynb) | Semi-log 訊號模型與最佳化式流量 | `新的第二部分4.2.2_semilog.ipynb` |
 
 原始程式及實驗參數均保留；筆記本的舊執行輸出已清除，論文圖片另存於 `docs/figures/`。原 semi-log 筆記本內文與檔名的章節編號不同，上表保留原始檔名供對照。
-
-## 快速開始
-
-需要 **Python 3.12**。實驗使用合成觀測資料，無需外部資料集、API 金鑰或 GPU。
-
-```bash
-git clone https://github.com/foktengkit/Congestion-Control-Learning.git
-cd Congestion-Control-Learning
-python -m venv .venv
-```
-
-啟用虛擬環境：
-
-```bash
-# macOS / Linux
-source .venv/bin/activate
-
-# Windows PowerShell
-.venv\Scripts\Activate.ps1
-```
-
-安裝並開啟 JupyterLab：
-
-```bash
-python -m pip install -r requirements.txt
-jupyter lab
-```
-
-開啟 `notebooks/` 中的檔案，使用 **Python 3** kernel，再執行 **Restart Kernel and Run All Cells**。每份筆記本均可由全新的 kernel 執行；03 的兩個實驗各自初始化狀態。
-
-也可在儲存庫根目錄以命令列執行線性模型：
-
-```bash
-mkdir -p results
-jupyter nbconvert --execute --to notebook \
-  notebooks/03_series_parallel_linear.ipynb \
-  --output linear.executed.ipynb --output-dir results \
-  --ExecutePreprocessor.kernel_name=python3 \
-  --ExecutePreprocessor.timeout=1200
-```
-
-`results/linear.executed.ipynb` 保存本次執行輸出。新版實驗另將每組 6 張 PNG 寫入執行工作目錄下的 `part*_series_parallel_outputs/` 或 `part*_series_parallel_semilog_outputs/`；從上述指令或 JupyterLab 開啟筆記本執行時，通常位於 `notebooks/` 內。這些生成檔已列入 `.gitignore`，不會覆蓋 `docs/figures/` 的論文原圖。
 
 ## 模型概要
 

@@ -1,0 +1,27 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter state
+.ipynb_checkpoints/
+.jupyter/
+.ipython/
+
+# Generated experiment outputs; thesis originals live in docs/figures/.
+/results/
+part*_series_parallel*_outputs/
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
